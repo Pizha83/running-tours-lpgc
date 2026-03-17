@@ -1,0 +1,33 @@
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import TrustBar from "@/components/TrustBar";
+import Experiences from "@/components/Experiences";
+import PrivateTourCTA from "@/components/PrivateTourCTA";
+import HowItWorks from "@/components/HowItWorks";
+import AboutGuide from "@/components/AboutGuide";
+import Gallery from "@/components/Gallery";
+import Reviews from "@/components/Reviews";
+import FAQ from "@/components/FAQ";
+import FinalCTA from "@/components/FinalCTA";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+
+export default function Home() {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <TrustBar />
+      <Experiences />
+      <PrivateTourCTA />
+      <HowItWorks />
+      <AboutGuide />
+      <Gallery />
+      <Reviews />
+      <FAQ />
+      <FinalCTA />
+      <Footer />
+      <WhatsAppButton />
+    </>
+  );
+}
