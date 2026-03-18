@@ -52,6 +52,11 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+        <meta name="theme-color" content="#0f172a" />
+      </head>
       <body className={`${inter.variable} ${sora.variable} antialiased`}>
         <DictionaryProvider dict={dict} locale={locale as Locale}>
           {children}

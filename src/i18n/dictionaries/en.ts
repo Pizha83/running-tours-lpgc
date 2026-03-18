@@ -13,7 +13,7 @@ const en = {
     title: "Discover Las Palmas",
     titleHighlight: "Running",
     subtitle:
-      "Explore iconic landmarks, hidden gems, and stunning coastlines with a local runner as your guide.",
+      "Explore the city's most iconic landmarks, hidden corners, and most stunning beaches with a local runner as your guide. Las Palmas, under your feet!",
     cta1: "Explore Experiences",
     cta2: "Meet Your Guide",
     rating: "5.0 — Loved by runners from 20+ countries",
@@ -45,17 +45,17 @@ const en = {
       {
         title: "Historic Vegueta Run",
         description:
-          "Step back in time as we run through Vegueta, the historic heart of the city. Discover the impressive Cathedral, the lively local Market, the elegant Pérez Galdós Theatre, and the famous Santa Ana Square, surrounded by centuries of history and beautiful architecture.",
+          "Step back in time running through Vegueta, the historic heart of the city. Discover the impressive Cathedral and Santa Ana Square, the Market, the elegant Pérez Galdós Theatre, and charming streets and plazas surrounded by centuries of history with beautiful architecture.",
         badge: "CULTURAL",
         distance: "4-6 km",
         duration: "60-90 min",
         level: "All levels",
       },
       {
-        title: "Ultimate Las Palmas Running Tour",
+        title: "Las Palmas Full Tour",
         description:
-          "Explore the city from end to end on this unique route. Starting near the Port and Marina, we run through the vibrant city center, along Las Alcaravaneras Beach, and finish at the spectacular natural pools of La Laja. A perfect way to experience the landscapes, culture, and energy of Las Palmas while running.",
-        badge: "ADVENTURE",
+          "Explore the city from end to end on this unique route. Starting near the Mercado del Puerto, we run through the vibrant city center, heading into the Muelle Deportivo and along Las Alcaravaneras Beach, finishing at the spectacular natural pools of La Laja, leaving the entire city behind and passing through the picturesque fishing quarter of San Cristóbal. A perfect way to experience the landscapes, culture, and energy of Las Palmas while running.",
+        badge: "SIGHTSEEING",
         distance: "10-12 km",
         duration: "90-120 min",
         level: "Intermediate",
@@ -97,11 +97,11 @@ const en = {
   about: {
     label: "Your Guide",
     title: "Meet Nano (Dani Mesa)",
-    p1: "Hi! I'm Dani, but everyone calls me Nano. I'm a passionate runner and proud local of Las Palmas de Gran Canaria. I created Running Tours LPGC because I believe the best way to discover a city is on the run.",
+    p1: "Hi! I'm Dani, your runnerguide! I'm a passionate runner and proud of Las Palmas de Gran Canaria. I created Running Tours LPGC because I truly believe the best way to discover a city is by running through it.",
     p2: "Whether you're a seasoned marathoner or a casual jogger, I'll adapt every route to your pace and show you the places only locals know. Let's run together!",
     yearsRunning: "Years Running",
     local: "Local",
-    bornRaised: "Born & Raised",
+    bornRaised: "Born in TF, raised in LPGC",
     languages: "Languages",
     followInstagram: "Follow on Instagram",
     joinStrava: "Join on Strava",

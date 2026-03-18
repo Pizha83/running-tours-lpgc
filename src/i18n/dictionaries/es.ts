@@ -15,7 +15,7 @@ const es: Dictionary = {
     title: "Descubre Las Palmas",
     titleHighlight: "Corriendo",
     subtitle:
-      "Explora monumentos emblemáticos, rincones ocultos y costas impresionantes con un corredor local como guía.",
+      "Explora los monumentos más emblemáticos de la ciudad, los rincones ocultos y las playas más impresionantes con un corredor local como guía. ¡Las Palmas, bajo tus pies!",
     cta1: "Ver Experiencias",
     cta2: "Conoce a Tu Guía",
     rating: "5.0 — Runners de más de 20 países nos avalan",
@@ -47,17 +47,17 @@ const es: Dictionary = {
       {
         title: "Ruta Histórica por Vegueta",
         description:
-          "Retrocede en el tiempo corriendo por Vegueta, el corazón histórico de la ciudad. Descubre la impresionante Catedral, el animado Mercado local, el elegante Teatro Pérez Galdós y la famosa Plaza de Santa Ana, rodeada de siglos de historia y hermosa arquitectura.",
+          "Retrocede en el tiempo corriendo por Vegueta, el corazón histórico de la ciudad. Descubre la impresionante Catedral y la Plaza de Santa Ana, el Mercado, el elegante Teatro Pérez Galdós y unas calles y plazoletas rodeadas de siglos de historia con una hermosa arquitectura.",
         badge: "CULTURAL",
         distance: "4-6 km",
         duration: "60-90 min",
         level: "Todos los niveles",
       },
       {
-        title: "Tour Running Completo por Las Palmas",
+        title: "Las Palmas al Completo",
         description:
-          "Explora la ciudad de punta a punta en esta ruta única. Empezando cerca del Puerto y la Marina, corremos por el vibrante centro de la ciudad, a lo largo de la Playa de Las Alcaravaneras, y terminamos en las espectaculares piscinas naturales de La Laja. Una forma perfecta de vivir los paisajes, la cultura y la energía de Las Palmas corriendo.",
-        badge: "AVENTURA",
+          "Explora la ciudad de punta a punta en esta ruta única. Empezando cerca del Mercado del Puerto, corremos por el vibrante centro de la ciudad, adentrándonos en el Muelle Deportivo y a lo largo de la Playa de Las Alcaravaneras, terminamos en las espectaculares piscinas naturales de La Laja, dejando atrás toda la ciudad y pasando por el pintoresco barrio marinero de San Cristóbal. Una forma perfecta de vivir los paisajes, la cultura y la energía de Las Palmas corriendo.",
+        badge: "TURÍSTICA",
         distance: "10-12 km",
         duration: "90-120 min",
         level: "Intermedio",
@@ -99,11 +99,11 @@ const es: Dictionary = {
   about: {
     label: "Tu Guía",
     title: "Conoce a Nano (Dani Mesa)",
-    p1: "¡Hola! Soy Dani, pero todos me llaman Nano. Soy un corredor apasionado y orgulloso local de Las Palmas de Gran Canaria. Creé Running Tours LPGC porque creo que la mejor forma de descubrir una ciudad es corriendo.",
+    p1: "¡Hola! Soy Dani, tu runnerguide! Soy un corredor apasionado y orgulloso de Las Palmas de Gran Canaria. Creé Running Tours LPGC porque sin duda, creo que la mejor forma de descubrir una ciudad es corriendo por ella.",
     p2: "Ya seas un maratoniano experimentado o un corredor casual, adaptaré cada ruta a tu ritmo y te enseñaré los lugares que solo los locales conocen. ¡Vamos a correr juntos!",
     yearsRunning: "Años Corriendo",
     local: "Local",
-    bornRaised: "Nacido y Criado",
+    bornRaised: "Nacido en TF, madurado en LPGC",
     languages: "Idiomas",
     followInstagram: "Síguenos en Instagram",
     joinStrava: "Únete en Strava",
