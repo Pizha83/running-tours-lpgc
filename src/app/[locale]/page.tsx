@@ -11,6 +11,7 @@ import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import CookieBanner from "@/components/CookieBanner";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <FinalCTA />
       <Footer />
       <WhatsAppButton />
+      <CookieBanner />
     </>
   );
 }

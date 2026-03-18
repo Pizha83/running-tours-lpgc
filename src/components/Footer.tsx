@@ -3,9 +3,10 @@
 import Image from "next/image";
 import { Instagram, Mail, MessageCircle } from "lucide-react";
 import { useDictionary } from "@/i18n/DictionaryProvider";
+import { resetCookieConsent } from "./CookieBanner";
 
 export default function Footer() {
-  const { dict } = useDictionary();
+  const { dict, locale } = useDictionary();
 
   const navLinks = [
     { label: dict.nav.experiences, href: "#experiences" },
@@ -14,6 +15,13 @@ export default function Footer() {
     { label: dict.nav.gallery, href: "#gallery" },
     { label: dict.nav.reviews, href: "#reviews" },
     { label: dict.nav.faq, href: "#faq" },
+  ];
+
+  const legalLinks = [
+    { label: dict.footer.legalNotice, href: `/${locale}/legal` },
+    { label: dict.footer.privacy, href: `/${locale}/privacy` },
+    { label: dict.footer.terms, href: `/${locale}/terms` },
+    { label: dict.footer.cookiePolicy, href: `/${locale}/cookies` },
   ];
 
   return (
@@ -101,18 +109,32 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-          <p className="text-xs text-white/40">
+        <div className="mt-10 border-t border-white/10 pt-8">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4">
+            {legalLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-xs text-white/40 hover:text-white/60 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            <button
+              onClick={resetCookieConsent}
+              className="text-xs text-white/40 hover:text-white/60 transition-colors cursor-pointer"
+            >
+              {dict.footer.cookieSettings}
+            </button>
+          </div>
+
+          <p className="text-[10px] text-white/30 text-center mb-4">
+            {dict.footer.complaints}
+          </p>
+
+          <p className="text-xs text-white/40 text-center">
             &copy; 2026 Running Tours LPGC. {dict.footer.rights}
           </p>
-          <div className="flex gap-6 text-xs text-white/40">
-            <a href="#" className="hover:text-white/60 transition-colors">
-              {dict.footer.privacy}
-            </a>
-            <a href="#" className="hover:text-white/60 transition-colors">
-              {dict.footer.terms}
-            </a>
-          </div>
         </div>
       </div>
     </footer>
