@@ -96,7 +96,7 @@ const en = {
   },
   about: {
     label: "Your Guide",
-    title: "Meet Nano (Dani Mesa)",
+    title: "Meet Dani Mesa",
     p1: "Hi! I'm Dani, your runnerguide! I'm a passionate runner and proud of Las Palmas de Gran Canaria. I created Running Tours LPGC because I truly believe the best way to discover a city is by running through it.",
     p2: "Whether you're a seasoned marathoner or a casual jogger, I'll adapt every route to your pace and show you the places only locals know. Let's run together!",
     yearsRunning: "Years Running",
@@ -105,7 +105,7 @@ const en = {
     languages: "Languages",
     followInstagram: "Follow on Instagram",
     joinStrava: "Join on Strava",
-    guideCard: "Nano — Local Runner Guide",
+    guideCard: "Dani Mesa — Local Runner Guide",
     guideLocation: "Las Palmas de Gran Canaria",
   },
   gallery: {

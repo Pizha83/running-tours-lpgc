@@ -98,7 +98,7 @@ const es: Dictionary = {
   },
   about: {
     label: "Tu Guía",
-    title: "Conoce a Nano (Dani Mesa)",
+    title: "Conoce a Dani Mesa",
     p1: "¡Hola! Soy Dani, tu runnerguide! Soy un corredor apasionado y orgulloso de Las Palmas de Gran Canaria. Creé Running Tours LPGC porque sin duda, creo que la mejor forma de descubrir una ciudad es corriendo por ella.",
     p2: "Ya seas un maratoniano experimentado o un corredor casual, adaptaré cada ruta a tu ritmo y te enseñaré los lugares que solo los locales conocen. ¡Vamos a correr juntos!",
     yearsRunning: "Años Corriendo",
@@ -107,7 +107,7 @@ const es: Dictionary = {
     languages: "Idiomas",
     followInstagram: "Síguenos en Instagram",
     joinStrava: "Únete en Strava",
-    guideCard: "Nano — Guía Runner Local",
+    guideCard: "Dani Mesa — Guía Runner Local",
     guideLocation: "Las Palmas de Gran Canaria",
   },
   gallery: {

@@ -12,10 +12,19 @@ import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import CookieBanner from "@/components/CookieBanner";
+import JsonLd from "@/components/JsonLd";
+import type { Locale } from "@/i18n/config";
 
-export default function Home() {
+export default async function Home({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
   return (
     <>
+      <JsonLd locale={locale as Locale} />
       <Navbar />
       <Hero />
       <TrustBar />
