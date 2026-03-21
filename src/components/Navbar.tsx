@@ -6,9 +6,11 @@ import { Menu, X, Globe } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useDictionary } from "@/i18n/DictionaryProvider";
 import { locales, localeNames, localeFlags, type Locale } from "@/i18n/config";
+import { useBooking } from "./BookingProvider";
 
 export default function Navbar() {
   const { dict, locale } = useDictionary();
+  const { openBooking } = useBooking();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
@@ -119,12 +121,12 @@ export default function Navbar() {
               </AnimatePresence>
             </div>
 
-            <a
-              href="#contact"
+            <button
+              onClick={() => openBooking()}
               className="bg-[#F97316] hover:bg-[#EA580C] text-white font-semibold text-sm px-5 py-2.5 rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/25"
             >
               {dict.nav.bookYourRun}
-            </a>
+            </button>
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
@@ -223,13 +225,12 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="#contact"
-                onClick={() => setMobileOpen(false)}
+              <button
+                onClick={() => { setMobileOpen(false); openBooking(); }}
                 className="mt-4 bg-[#F97316] hover:bg-[#EA580C] text-white font-semibold px-8 py-3 rounded-full transition-all"
               >
                 {dict.nav.bookYourRun}
-              </a>
+              </button>
             </div>
           </motion.div>
         )}

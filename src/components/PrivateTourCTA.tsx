@@ -5,9 +5,11 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { fadeUp } from "@/lib/animations";
 import { useDictionary } from "@/i18n/DictionaryProvider";
+import { useBooking } from "./BookingProvider";
 
 export default function PrivateTourCTA() {
   const { dict } = useDictionary();
+  const { openBooking } = useBooking();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -56,12 +58,12 @@ export default function PrivateTourCTA() {
             <span className="text-white/70">{dict.privateTour.person}</span>
           </motion.div>
           <motion.div variants={fadeUp} className="mt-8">
-            <a
-              href="#contact"
+            <button
+              onClick={() => openBooking("private")}
               className="inline-flex items-center rounded-full bg-[#F97316] px-8 py-3.5 text-base font-semibold text-white transition-all duration-300 hover:bg-[#EA580C] hover:shadow-lg hover:shadow-orange-500/30 hover:-translate-y-0.5"
             >
               {dict.privateTour.cta}
-            </a>
+            </button>
           </motion.div>
         </motion.div>
       </div>

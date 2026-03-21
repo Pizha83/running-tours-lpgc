@@ -22,6 +22,7 @@ export default function Footer() {
     { label: dict.footer.privacy, href: `/${locale}/privacy` },
     { label: dict.footer.terms, href: `/${locale}/terms` },
     { label: dict.footer.cookiePolicy, href: `/${locale}/cookies` },
+    { label: dict.footer.waiver, href: `/${locale}/waiver` },
   ];
 
   return (

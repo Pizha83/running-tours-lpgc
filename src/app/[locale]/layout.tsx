@@ -4,6 +4,8 @@ import "../globals.css";
 import { locales, type Locale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/getDictionary";
 import { DictionaryProvider } from "@/i18n/DictionaryProvider";
+import BookingProvider from "@/components/BookingProvider";
+import BookingModal from "@/components/BookingModal";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -136,7 +138,10 @@ export default async function LocaleLayout({
       </head>
       <body className={`${inter.variable} ${sora.variable} antialiased`}>
         <DictionaryProvider dict={dict} locale={locale as Locale}>
-          {children}
+          <BookingProvider>
+            {children}
+            <BookingModal />
+          </BookingProvider>
         </DictionaryProvider>
       </body>
     </html>

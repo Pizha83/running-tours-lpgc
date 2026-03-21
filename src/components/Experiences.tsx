@@ -6,6 +6,7 @@ import { motion, useInView } from "framer-motion";
 import { MapPin, Clock, Activity } from "lucide-react";
 import { staggerContainer, fadeUp } from "@/lib/animations";
 import { useDictionary } from "@/i18n/DictionaryProvider";
+import { useBooking } from "./BookingProvider";
 
 const tourImages = [
   "/images/hero-las-canteras.jpg",
@@ -23,6 +24,7 @@ const tourPrices = [35, 40, 55];
 
 export default function Experiences() {
   const { dict } = useDictionary();
+  const { openBooking } = useBooking();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -117,12 +119,12 @@ export default function Experiences() {
                       {dict.experiences.person}
                     </span>
                   </div>
-                  <a
-                    href="#contact"
+                  <button
+                    onClick={() => openBooking(i)}
                     className="rounded-full bg-[#F97316] px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#EA580C] hover:shadow-md hover:shadow-orange-500/20"
                   >
                     {dict.experiences.bookNow}
-                  </a>
+                  </button>
                 </div>
               </div>
             </motion.div>

@@ -2,8 +2,12 @@
 
 import { motion } from "framer-motion";
 import { MessageCircle } from "lucide-react";
+import { useBooking } from "./BookingProvider";
 
 export default function WhatsAppButton() {
+  const { isOpen } = useBooking();
+  if (isOpen) return null;
+
   return (
     <motion.a
       href="https://wa.me/34671201007?text=Hi!%20I%27d%20like%20to%20book%20a%20running%20tour"

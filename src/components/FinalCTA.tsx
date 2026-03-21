@@ -5,9 +5,11 @@ import { motion, useInView } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import { MessageCircle } from "lucide-react";
 import { useDictionary } from "@/i18n/DictionaryProvider";
+import { useBooking } from "./BookingProvider";
 
 export default function FinalCTA() {
   const { dict } = useDictionary();
+  const { openBooking } = useBooking();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -44,12 +46,12 @@ export default function FinalCTA() {
             variants={fadeUp}
             className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
           >
-            <a
-              href="#experiences"
+            <button
+              onClick={() => openBooking()}
               className="inline-flex items-center rounded-full bg-white px-8 py-4 text-base font-bold text-[#F97316] transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5"
             >
               {dict.finalCta.cta}
-            </a>
+            </button>
             <a
               href="https://wa.me/34671201007?text=Hi!%20I%27d%20like%20to%20book%20a%20running%20tour"
               target="_blank"
