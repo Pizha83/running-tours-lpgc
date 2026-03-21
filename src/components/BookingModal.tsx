@@ -319,15 +319,6 @@ export default function BookingModal() {
                           <option value="Spanish">
                             {t.languageOptions.spanish}
                           </option>
-                          <option value="French">
-                            {t.languageOptions.french}
-                          </option>
-                          <option value="German">
-                            {t.languageOptions.german}
-                          </option>
-                          <option value="Other">
-                            {t.languageOptions.other}
-                          </option>
                         </select>
                       </div>
                     </div>
