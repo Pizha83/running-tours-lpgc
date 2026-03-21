@@ -1,26 +1,26 @@
 export const tours = [
   {
     id: "las-canteras",
-    title: "Las Canteras Running Experience",
+    title: "The Las Canteras Experience",
     description:
       "Run along the stunning Las Canteras Beach, one of the most beautiful urban beaches in Europe, right in the heart of the city. The route finishes at the iconic Alfredo Kraus Auditorium, where the ocean views make this experience truly unforgettable.",
     image: "/images/hero-las-canteras.jpg",
     badge: "MOST POPULAR",
     badgeColor: "from-orange-500 to-amber-400",
-    distance: "5-7 km",
+    distance: "3-5 km",
     duration: "60-75 min",
     level: "All levels",
     price: 35,
   },
   {
     id: "vegueta",
-    title: "Historic Vegueta Run",
+    title: "The Vegueta Experience",
     description:
       "Step back in time as we run through Vegueta, the historic heart of the city. Discover the impressive Cathedral, the lively local Market, the elegant Pérez Galdós Theatre, and the famous Santa Ana Square, surrounded by centuries of history and beautiful architecture.",
     image: "/images/vegueta-cathedral-sunset.jpg",
     badge: "CULTURAL",
     badgeColor: "from-sky-500 to-blue-600",
-    distance: "4-6 km",
+    distance: "5-7 km",
     duration: "60-90 min",
     level: "All levels",
     price: 40,
@@ -42,44 +42,28 @@ export const tours = [
 
 export const reviews = [
   {
+    name: "María García",
+    country: "España",
+    flag: "🇪🇸",
+    rating: 5,
+    text: "Una experiencia increíble. Dani nos llevó por rincones de Las Canteras que ni conocíamos. El ritmo fue perfecto y las vistas al amanecer, inolvidables. ¡Totalmente recomendable!",
+    avatar: "MG",
+  },
+  {
+    name: "Carlos Ruiz",
+    country: "España",
+    flag: "🇪🇸",
+    rating: 5,
+    text: "Correr por Vegueta con un guía local es otra cosa. Nos contó la historia de cada rincón mientras corríamos a un ritmo muy cómodo. Acabamos tomando un café en la plaza. ¡Volveremos seguro!",
+    avatar: "CR",
+  },
+  {
     name: "Sarah Mitchell",
     country: "United Kingdom",
     flag: "🇬🇧",
     rating: 5,
     text: "Best way to see Las Palmas! Our guide showed us hidden spots we never would have found. The sunrise over Las Canteras was absolutely magical.",
     avatar: "SM",
-  },
-  {
-    name: "Thomas Weber",
-    country: "Germany",
-    flag: "🇩🇪",
-    rating: 5,
-    text: "I run in every city I visit, and this was one of my favorite running tours ever. Great pace, amazing route along the beach, and such a friendly guide.",
-    avatar: "TW",
-  },
-  {
-    name: "Anna Lindqvist",
-    country: "Sweden",
-    flag: "🇸🇪",
-    rating: 5,
-    text: "Perfect pace, perfect route, perfect guide. Already recommended it to all my running friends. The Vegueta tour was like running through a museum!",
-    avatar: "AL",
-  },
-  {
-    name: "Mark van den Berg",
-    country: "Netherlands",
-    flag: "🇳🇱",
-    rating: 5,
-    text: "Such a unique way to explore the city. We saw the cathedral, ran along the coast, and ended with coffee. Can't recommend this enough!",
-    avatar: "MB",
-  },
-  {
-    name: "Claire Dupont",
-    country: "France",
-    flag: "🇫🇷",
-    rating: 5,
-    text: "Incroyable! The Ultimate tour was challenging but so rewarding. Finishing at the natural pools was the perfect way to cool down. Loved every minute.",
-    avatar: "CD",
   },
 ];
 

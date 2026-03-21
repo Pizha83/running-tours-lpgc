@@ -2,7 +2,7 @@ const en = {
   nav: {
     experiences: "Experiences",
     howItWorks: "How It Works",
-    about: "About",
+    about: "Your Guide",
     gallery: "Gallery",
     reviews: "Reviews",
     faq: "FAQ",
@@ -34,20 +34,20 @@ const en = {
     person: "/person",
     tours: [
       {
-        title: "Las Canteras Running Experience",
+        title: "The Las Canteras Experience",
         description:
           "Run along the stunning Las Canteras Beach, one of the most beautiful urban beaches in Europe, right in the heart of the city. The route finishes at the iconic Alfredo Kraus Auditorium, where the ocean views make this experience truly unforgettable.",
         badge: "MOST POPULAR",
-        distance: "5-7 km",
+        distance: "3-5 km",
         duration: "60-75 min",
         level: "All levels",
       },
       {
-        title: "Historic Vegueta Run",
+        title: "The Vegueta Experience",
         description:
           "Step back in time running through Vegueta, the historic heart of the city. Discover the impressive Cathedral and Santa Ana Square, the Market, the elegant Pérez Galdós Theatre, and charming streets and plazas surrounded by centuries of history with beautiful architecture.",
         badge: "CULTURAL",
-        distance: "4-6 km",
+        distance: "5-7 km",
         duration: "60-90 min",
         level: "All levels",
       },

@@ -4,7 +4,7 @@ const fr: Dictionary = {
   nav: {
     experiences: "Expériences",
     howItWorks: "Comment ça Marche",
-    about: "À Propos",
+    about: "Ton Guide",
     gallery: "Galerie",
     reviews: "Avis",
     faq: "FAQ",
@@ -36,20 +36,20 @@ const fr: Dictionary = {
     person: "/personne",
     tours: [
       {
-        title: "Las Canteras Running Experience",
+        title: "L'Expérience de Las Canteras",
         description:
           "Courez le long de la magnifique plage de Las Canteras, l'une des plus belles plages urbaines d'Europe, en plein cœur de la ville. Le parcours se termine au célèbre Auditorium Alfredo Kraus, où les vues sur l'océan rendent cette expérience inoubliable.",
         badge: "PLUS POPULAIRE",
-        distance: "5-7 km",
+        distance: "3-5 km",
         duration: "60-75 min",
         level: "Tous niveaux",
       },
       {
-        title: "Course Historique à Vegueta",
+        title: "L'Expérience de Vegueta",
         description:
           "Remontez le temps en courant à travers Vegueta, le cœur historique de la ville. Découvrez l'impressionnante Cathédrale et la Place Santa Ana, le Marché, l'élégant Théâtre Pérez Galdós et des rues et placettes entourées de siècles d'histoire avec une architecture magnifique.",
         badge: "CULTUREL",
-        distance: "4-6 km",
+        distance: "5-7 km",
         duration: "60-90 min",
         level: "Tous niveaux",
       },
