@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef, type FormEvent } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Loader2, CheckCircle } from "lucide-react";
+import { X, Loader2, CheckCircle, MessageCircle } from "lucide-react";
 import { useDictionary } from "@/i18n/DictionaryProvider";
 import { useBooking } from "./BookingProvider";
 
@@ -14,6 +14,14 @@ export default function BookingModal() {
   const t = dict.bookingForm;
   const formRef = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<FormStatus>("idle");
+  const submittedDataRef = useRef<{
+    tourName: string;
+    date: string;
+    time: string;
+    people: string;
+    language: string;
+    email: string;
+  } | null>(null);
 
   // Scroll lock
   useEffect(() => {
@@ -38,6 +46,7 @@ export default function BookingModal() {
   function handleClose() {
     closeBooking();
     setStatus("idle");
+    submittedDataRef.current = null;
     formRef.current?.reset();
   }
 
@@ -74,17 +83,24 @@ export default function BookingModal() {
     const date = data.get("date") as string;
     const fullName = data.get("fullName") as string;
 
+    const time = data.get("time") as string;
+    const language = data.get("language") as string;
+    const email = data.get("email") as string;
+
+    // Save for WhatsApp link on success screen
+    submittedDataRef.current = { tourName, date, time, people, language, email };
+
     const body = {
       access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_WEB3FORMS_KEY",
       subject: `Nueva reserva: ${tourName} — ${people} pax — ${date}`,
       from_name: fullName,
       Tour: tourName,
       "Preferred Date": date,
-      "Preferred Time": data.get("time") as string,
+      "Preferred Time": time,
       "Number of People": people,
-      "Tour Language": data.get("language") as string,
+      "Tour Language": language,
       "Full Name": fullName,
-      Email: data.get("email") as string,
+      Email: email,
       WhatsApp: data.get("whatsapp") as string,
       Message: (data.get("message") as string) || "No message",
       "Terms & Waiver Accepted": "Yes",
@@ -159,12 +175,25 @@ export default function BookingModal() {
                   <h3 className="text-xl font-bold text-[#0C4A6E] mb-2">
                     {t.successTitle}
                   </h3>
-                  <p className="text-[#64748B] mb-8 max-w-sm">
+                  <p className="text-[#64748B] mb-6 max-w-sm">
                     {t.successMessage}
                   </p>
+                  {submittedDataRef.current && (
+                    <a
+                      href={`https://wa.me/34671201007?text=${encodeURIComponent(
+                        `Hi Dani! 👋 I just submitted a booking request:\n\n🏃 Tour: ${submittedDataRef.current.tourName}\n📅 Date: ${submittedDataRef.current.date}\n⏰ Time: ${submittedDataRef.current.time}\n👥 People: ${submittedDataRef.current.people}\n🗣️ Language: ${submittedDataRef.current.language}\n📧 Email: ${submittedDataRef.current.email}\n\nLooking forward to running with you!`
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-[#25D366] hover:bg-[#1DA851] text-white font-semibold rounded-full px-8 py-3.5 transition-all duration-300 inline-flex items-center justify-center gap-2 mb-4"
+                    >
+                      <MessageCircle size={20} />
+                      {t.whatsappButton}
+                    </a>
+                  )}
                   <button
                     onClick={handleClose}
-                    className="bg-[#F97316] hover:bg-[#EA580C] text-white font-semibold rounded-full px-8 py-3 transition-all duration-300"
+                    className="text-sm text-[#64748B] hover:text-[#1E293B] underline transition-colors"
                   >
                     {t.closeButton}
                   </button>
