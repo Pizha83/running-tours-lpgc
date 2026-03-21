@@ -15,12 +15,14 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   color: var(--color-text-primary);
   background: var(--color-bg-warm);
   font-family: var(--font-sans);
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {

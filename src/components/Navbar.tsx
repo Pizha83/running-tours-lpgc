@@ -49,10 +49,10 @@ export default function Navbar() {
             <Image
               src="/images/logo.jpg"
               alt="Running Tours LPGC"
-              width={48}
-              height={48}
+              width={80}
+              height={80}
               className={`rounded-full transition-all duration-300 ${
-                scrolled ? "w-10 h-10" : "w-12 h-12"
+                scrolled ? "w-14 h-14" : "w-16 h-16 lg:w-20 lg:h-20"
               }`}
             />
             <span
@@ -196,9 +196,9 @@ export default function Navbar() {
                 <Image
                   src="/images/logo.jpg"
                   alt="Running Tours LPGC"
-                  width={40}
-                  height={40}
-                  className="rounded-full"
+                  width={44}
+                  height={44}
+                  className="rounded-full w-11 h-11"
                 />
                 <span className="font-bold text-[#0C4A6E]">
                   Running Tours LPGC

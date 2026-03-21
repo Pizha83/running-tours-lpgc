@@ -57,7 +57,7 @@ export default function TrustBar() {
 
   return (
     <section id="trust" ref={ref} className="relative z-10 -mt-12">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

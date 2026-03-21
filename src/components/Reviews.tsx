@@ -13,7 +13,7 @@ export default function Reviews() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="reviews" ref={ref} className="bg-[#0F172A] py-24 lg:py-32">
+    <section id="reviews" ref={ref} className="bg-[#0F172A] py-24 lg:py-32 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
