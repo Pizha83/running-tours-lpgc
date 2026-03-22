@@ -80,31 +80,37 @@ export default function BookingModal() {
         ? t.privateTourOption
         : tourNames[Number(tourValue)] ?? "";
     const people = data.get("people") as string;
-    const date = data.get("date") as string;
+    const rawDate = data.get("date") as string;
     const fullName = data.get("fullName") as string;
 
     const time = data.get("time") as string;
     const language = data.get("language") as string;
     const email = data.get("email") as string;
 
+    // Format date from YYYY-MM-DD to DD/MM/YYYY
+    const [y, m, d] = rawDate.split("-");
+    const date = `${d}/${m}/${y}`;
+
     // Save for WhatsApp link on success screen
     submittedDataRef.current = { tourName, date, time, people, language, email };
 
+    const whatsappNumber = data.get("whatsapp") as string;
+    const message = (data.get("message") as string) || "-";
+
     const body = {
       access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY || "YOUR_WEB3FORMS_KEY",
-      subject: `Nueva reserva: ${tourName} — ${people} pax — ${date}`,
+      subject: `Nueva reserva / New booking: ${tourName} — ${people} pax — ${date}`,
       from_name: fullName,
-      Tour: tourName,
-      "Preferred Date": date,
-      "Preferred Time": time,
-      "Number of People": people,
-      "Tour Language": language,
-      "Full Name": fullName,
-      Email: email,
-      WhatsApp: data.get("whatsapp") as string,
-      Message: (data.get("message") as string) || "No message",
-      "Terms & Waiver Accepted": "Yes",
-      "Privacy Policy Accepted": "Yes",
+      "Tour / Tour": tourName,
+      "Fecha / Date": date,
+      "Horario / Time": time,
+      "Personas / People": people,
+      "Idioma / Language": language,
+      "Nombre / Name": fullName,
+      "Email / Email": email,
+      "WhatsApp": whatsappNumber,
+      "Mensaje / Message": message,
+      "Términos aceptados / Terms accepted": "Sí / Yes",
       botcheck: "",
     };
 
@@ -181,7 +187,7 @@ export default function BookingModal() {
                   {submittedDataRef.current && (
                     <a
                       href={`https://wa.me/34671201007?text=${encodeURIComponent(
-                        `Hi Dani! 👋 I just submitted a booking request:\n\n🏃 Tour: ${submittedDataRef.current.tourName}\n📅 Date: ${submittedDataRef.current.date}\n⏰ Time: ${submittedDataRef.current.time}\n👥 People: ${submittedDataRef.current.people}\n🗣️ Language: ${submittedDataRef.current.language}\n📧 Email: ${submittedDataRef.current.email}\n\nLooking forward to running with you!`
+                        `¡Hola Dani! 👋 Acabo de enviar una solicitud de reserva / I just submitted a booking request:\n\n🏃 Tour: ${submittedDataRef.current.tourName}\n📅 Fecha / Date: ${submittedDataRef.current.date}\n⏰ Horario / Time: ${submittedDataRef.current.time}\n👥 Personas / People: ${submittedDataRef.current.people}\n🗣️ Idioma / Language: ${submittedDataRef.current.language}\n📧 Email: ${submittedDataRef.current.email}\n\n¡Con ganas de correr! / Looking forward to running with you!`
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
